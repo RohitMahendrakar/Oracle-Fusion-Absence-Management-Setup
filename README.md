@@ -141,6 +141,22 @@ Allows employees to donate leave balances to colleagues (where enabled).
 
 ---
 
+
+---
+
+## 📝 Points to Remember
+
+* Please **clone the project** instead of downloading individual files.  
+* Cloning or downloading the **entire repository as a ZIP** will include all required folders and images.  
+* After downloading, **unzip the project** — you’ll find all the **execution screenshots** inside the designated folder (e.g., `/screenshots/`).  
+* The images may not open correctly if viewed through “Download Raw” on GitHub — this is expected.  
+* Always open images **locally after extraction** to view the execution results clearly.
+
+
+
+
+---
+
 ⭐ **Author:** Rohit Anand
 📍 *Bangalore, India*
 💼 *Oracle HCM Functional Enthusiast | Cloud Learner*
