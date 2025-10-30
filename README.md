@@ -1,102 +1,115 @@
-Here’s your README rewritten in a **clean, professional, and visually appealing GitHub format** — same content, but with **consistent Markdown**, better spacing, link formatting, and emoji alignment for a modern look.
-
-You can copy this directly into your `README.md` file.
-All the references (`[1]`, `[2]`, etc.) are kept intact for easy maintenance.
-
----
-
-````{"id":"59290","variant":"standard","title":"Oracle Fusion — Absence Management Module (Final README)"}
+````{"variant":"standard","id":"32710","title":"Oracle Fusion — Absence Management Module (Final README.md)"}
 # 🧭 Oracle Fusion — Absence Management Module
 
-> A concise, GitHub-ready README describing the **Absence Management configuration and processes** implemented in **Oracle Fusion HCM**.  
-> Includes configuration tasks, transactional flows, and a clear explanation of absence plan/type concepts (accrual, entitlement, qualification, etc.).
+> A professional and visually rich README for the **Absence Management configuration and processes** implemented in **Oracle Fusion HCM**.  
+> Includes setup components, transactional workflows, and a clear breakdown of absence plan types like **Accrual**, **Entitlement**, and **Qualification**.
 
 ---
 
 ## 📘 Overview
 
-This repository documents the **Absence Management** setup and processes in **Oracle Fusion HCM**.  
-The module helps organizations manage **employee leaves, accruals, entitlements, carryover rules, and automation** — ensuring accurate leave balances and compliance across HR, managers, and employees.  
+This repository documents the **Absence Management** module setup in **Oracle Fusion HCM**.  
+It provides a structured explanation of configurations, plan types, and process flows across **HR**, **Managers**, and **Employees** — enabling streamlined leave management, automation, and compliance.  
 ([Oracle Docs][1])
 
 ---
 
-## ⚙️ Key Configuration Tasks
+## ⚙️ Configuration Components
 
-*(These tasks were performed in the Absences work area.)*
+Below are the core configuration tasks performed in the **Absence Management** work area:
 
-- **Manage Derived Factors** — Create calculated factors (e.g., *length of service*, *age*) used to compute entitlements and eligibility.  
-- **Manage Eligibility Profile** — Group employees by criteria (job, location, grade, org) to control who can enroll in plans.  
-- **Manage Time Periods** — Define accrual and reporting periods (monthly, yearly, or custom).  
-- **Manage Global Absence Lookups** — Standardize codes/values used across absence configurations.  
-- **Manage Global Absence Descriptive Flexfields (DFFs)** — Add custom fields for organization-specific data capture.  
-- **Manage Absence Reasons** — List standard reasons (e.g., *Sick*, *Vacation*, *Parental*, *Bereavement*).  
-- **Manage Absence Plans** — Create plans that govern accrual, entitlement, carryover, limits, and rules.  
-- **Manage Absence Certifications** — Configure medical or other certification requirements for certain absences.  
-- **Manage Absence Types** — Map business leave categories (paid, unpaid, accrual-based, entitlement-based) to plans.  
-- **Manage Work Shifts / Work Day Patterns / Work Schedules** — Set shift times and working patterns to calculate absence duration correctly.  
-- **Manage Calendar Events** — Configure organization holidays and events that influence leave calculations.
-
-> These tasks follow **Oracle Fusion best practices** for building end-to-end absence management flows.  
-> ([Oracle Docs][1])
+- ⚖️ **Manage Derived Factors** — Create calculated metrics like *Length of Service* or *Age* to determine eligibility and entitlement.  
+- 🧩 **Manage Eligibility Profile** — Define which employees qualify for a plan based on roles, grades, or locations.  
+- 📅 **Manage Time Periods** — Set up accrual and reporting periods (monthly, yearly, or fiscal).  
+- 🌐 **Manage Global Absence Lookups** — Maintain standardized lookup codes used across the application.  
+- 🧾 **Manage Global Absence DFFs (Descriptive Flexfields)** — Add organization-specific data capture fields.  
+- 🧍 **Manage Absence Reasons** — Define business-specific leave reasons (*Sick*, *Vacation*, *Maternity*, etc.).  
+- 🧮 **Manage Absence Plans** — Configure accrual rules, carryover, limits, and disbursement options.  
+- 📑 **Manage Absence Certifications** — Require supporting documentation for absences like *Medical Leave*.  
+- 🗂️ **Manage Absence Types** — Classify absences by behavior (*Accrual-based*, *Entitlement-based*, *Qualification-based*).  
+- 🕒 **Manage Work Shifts, Day Patterns & Schedules** — Define working time structures for accurate duration calculation.  
+- 📆 **Manage Calendar Events** — Record organizational holidays that affect absence calculations.
 
 ---
 
-## 🧾 Absence Plan & Type Definitions
+## 🧾 Absence Plan Types
 
-Oracle Fusion supports multiple **plan types** and **absence behaviours**.  
-Below are concise definitions useful for configuration documentation and understanding plan functionality.
+Oracle Fusion supports multiple **absence plan categories** — each serving different business or statutory needs.
 
-### 🗂️ Plan Types (created via *Absence Plans*)
+### 🗂️ **1. Accrual Plan**
+Employees earn leave progressively based on time worked (e.g., per pay period or month).  
+*Example:* 1.67 days accrued monthly.  
+Used for **Paid Time Off (PTO)**, **Annual Leave**, or **Vacation**.
 
-- **Accrual Plan** — Employees earn leave over time (hours/days per pay period). Commonly used for PTO or vacation where balances grow gradually.  
-  *Example:* accrue 1.67 days per month. ([Oracle Docs][2])
+### 🎯 **2. Entitlement Plan**
+Fixed leave granted upfront at the start of a period (e.g., 12 casual leave days per year).  
+Ideal for **Statutory Leave** or **One-time grants**.
 
-- **Qualification Plan** — Entitlement is determined by meeting qualification rules (e.g., *minimum service period*) before entitlement is granted. ([Oracle Docs][1])
+### 🧮 **3. Qualification Plan**
+Leave is granted only when an employee meets certain criteria (e.g., *minimum 2 years of service*).  
+Used for **Long Service Leave** or **Special Leave**.
 
-- **No Entitlement Plan** — The absence is tracked but not entitled (used for unpaid or statutory leaves). ([Oracle Docs][2])
+### ⚙️ **4. Compensatory Plan**
+Employees earn time-off for extra hours worked (Comp-Off).  
+Balances depend on approved overtime entries.
 
-- **Agreement Plan** — Behaviour is based on collective or company agreements (e.g., *union agreements*). ([Oracle Docs][2])
+### 🤝 **5. Agreement Plan**
+Rules derived from collective or union agreements defining specific leave rights.
 
-- **Compensatory Plan** — Time off earned in exchange for extra hours worked (*comp time*). ([Oracle Docs][2])
-
-- **Donation Plan** — Employees donate leave balance to another employee (where supported). ([Oracle Docs][3])
+### 💝 **6. Donation Plan**
+Allows employees to donate leave balances to colleagues (where enabled).
 
 ---
 
-### 🧠 Common Absence Behaviours & Concepts
+## 🧠 Key Concepts
 
-- **Accrual** — Mechanism to accumulate leave over time (periodic increments). Accruals can be monthly, weekly, banded, or grant-based. ([Oracle Docs][1])  
-- **Entitlement** — The total leave an employee is eligible to use (fixed grant, qualification-based, or derived from accruals).  
-  *Example:* maternity entitlement, statutory sick entitlement. ([Oracle][4])  
-- **Carryover / Carry Forward** — Allows unused accruals to move into the next period up to defined limits or expiry rules. ([Oracle Docs][1])  
-- **Certification** — Documentation requirement (e.g., medical certificate) enforced by the plan before entitlement approval. ([Oracle Docs][1])  
-- **Adjustments / Disbursements** — Manual or automated operations used to correct balances or disburse cash when supported. ([Oracle Docs][1])
+| Concept | Description |
+|----------|--------------|
+| 🕓 **Accrual** | Process of periodically adding leave to an employee’s balance. |
+| 🎟️ **Entitlement** | The total amount of leave an employee is eligible to use. |
+| 🔁 **Carryover** | Transfer of unused leave to the next period within defined limits. |
+| 🩺 **Certification** | Supporting document required for specific absences. |
+| ⚖️ **Adjustments / Disbursements** | Manual corrections or payouts of accrued leave. |
 
-> Oracle supports **accrual-based**, **entitlement-based**, and **rule-based** absence types (e.g., *Bereavement*), offering flexibility to model both **business** and **statutory** requirements.  
+> Oracle’s flexible model allows hybrid leave systems — combining **accrual-based**, **entitlement-based**, and **qualification-based** plans.  
 > ([Oracle][4])
 
 ---
 
-## 👥 Transaction Flows — Roles & Responsibilities
+## 👥 Role-Based Transaction Flows
 
-### 👩‍💼 HR / Absence Administrator
-- Enroll employees into absence plans (based on eligibility).  
-- Configure accrual rules, carryover, and plan limits.  
-- Run **accrual** and **balance calculation** processes and reconcile results.  
-- Update or correct plan enrollments and perform balance adjustments.  
-- Configure certifications, lookups, and descriptive flexfields (DFFs).
+### 👩‍💼 HR Administrator
+- Enroll employees in absence plans.  
+- Run **Accrual Calculation** and **Balance Updates**.  
+- Adjust balances and update plan configurations.  
+- Review plan enrollments, disbursements, and exceptions.  
+- Monitor absence-related scheduled processes.
 
 ### 🧑‍💻 Employee (Self-Service)
-- Submit leave requests (choose type, dates, and reason).  
-- View balances and leave history (entitlements, accruals, consumption).
+- Apply for leaves and view current balances.  
+- Track approval status and leave history.  
+- Submit certifications if required.
 
-### 👨‍🏫 Manager / Administrator (Self-Service)
-- Approve or reject leave requests for direct reports.  
-- Apply leave on behalf of employees (where permitted).  
-- Monitor scheduled processes (accrual runs, evaluations, exceptions).  
-- Automate recurring jobs for accrual runs, plan updates, and reporting.  
-([Oracle][5])
+### 👨‍🏫 Manager / Approver
+- Approve or reject employee absence requests.  
+- Apply leave on behalf of subordinates (if authorized).  
+- Oversee absence analytics and ensure business continuity.
+
+---
+
+## 🧩 HR Transactions Overview
+
+| Process | Description |
+|----------|--------------|
+| 🪪 **Absence Plan Enrollment** | Assigns employees to plans based on eligibility. |
+| 📊 **Calculate Accrual & Balances** | Executes accrual process to update balances. |
+| 🧾 **Update Plan Enrollment** | Modifies or corrects existing enrollments. |
+| 💸 **Accrual Balance Disbursement** | Converts leave to monetary disbursement if enabled. |
+| 🔧 **Adjusting Balances** | Manual corrections by HR admin. |
+| 🧍 **Employee Self-Service Leave Application** | Employee applies for leave through self-service portal. |
+| 🧑‍💼 **Manager Self-Service Leave Application** | Manager applies or approves leave for team members. |
+| 🕰️ **Schedule & Monitor Absence Processes** | Monitor accrual jobs and leave-related automation. |
+| 🤖 **Automate the Schedule Process** | Set recurring automation for accrual and balance updates. |
 
 ---
 
@@ -104,22 +117,24 @@ Below are concise definitions useful for configuration documentation and underst
 
 ```
 Oracle-Fusion-Absence-Management/
-├── README.md                <-- (this file)
-├── screenshots/             <-- all screenshots in one folder
-├── configs/                 <-- configuration exports or reference files
-├── process_docs/            <-- HR & absence process notes
-└── examples/                <-- sample plan definitions or templates
+├── README.md                 <-- (this file)
+├── screenshots/              <-- all screenshots in one folder
+├── configs/                  <-- configuration exports / references
+├── process_docs/             <-- HR & process documentation
+└── examples/                 <-- sample plan templates
 ```
 
-All screenshots are stored inside the `/screenshots` folder for simplicity.
+All screenshots are consolidated under the `/screenshots` folder for easy access.
 
 ---
 
-## 📚 Sources & References
+## 📚 References
 
-- Oracle Cloud HCM — *Types of Absence Plans* and Absence Management implementation docs. ([Oracle Docs][2])  
-- Oracle Absence Management Datasheet — explains accrual-based and entitlement-based plan support. ([Oracle][4])  
-- Leave & Accrual HR best practices — definitions of accrual, entitlement, and carryover. ([Shiftbase][6])
+- [Oracle HCM Cloud Absence Management Overview][4]  
+- [Defining Absence Plans — Oracle Docs][2]  
+- [Absence Plan Donation — Oracle Docs][3]  
+- [Oracle 24D HCM Documentation][1]  
+- [Shiftbase HR Blog — Accrual vs Entitlement][6]
 
 ---
 
@@ -128,19 +143,14 @@ All screenshots are stored inside the `/screenshots` folder for simplicity.
 [3]: https://docs.oracle.com/en/cloud/saas/human-resources/24d/fahcm/absence-plan-donation.html  
 [4]: https://www.oracle.com/applications/human-capital-management/absence-management/  
 [5]: https://docs.oracle.com/en/cloud/saas/human-resources/24d/fahcm/manage-absences.html  
-[6]: https://www.shiftbase.com/blog/accrual-vs-entitlement-leave
+[6]: https://www.shiftbase.com/blog/accrual-vs-entitlement-leave  
 
 ---
 
 ⭐ **Author:** Rohit Anand  
 📍 *Bangalore, India*  
 💼 *Oracle HCM Functional Enthusiast | Cloud Learner*  
-
+🌐 *(Optional: Add LinkedIn / Portfolio URL)*  
 
 ---
 ````
-
-
-
-
-
