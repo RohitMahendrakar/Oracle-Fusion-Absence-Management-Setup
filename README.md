@@ -1,7 +1,3 @@
-Nice — I removed the execution-proof section, used your single screenshots folder, tightened the absence-type explanations (with authoritative sources), and made the README GitHub-ready, readable, and a little lively with emojis. I also included concise definitions for **Accrual**, **Entitlement**, **Qualification**, and other plan/type terms and cited Oracle + HR docs for accuracy.
-
-Copy the Markdown below into your `README.md` file in your repo.
-
 ---
 
 # 🧭 Oracle Fusion — Absence Management Module
@@ -86,28 +82,6 @@ Oracle Fusion supports multiple **plan types** and **absence behaviours**. Below
 
 ---
 
-## 🗂 Repository structure (suggested)
-
-```
-Oracle-Fusion-Absence-Management/
-├── README.md                <-- (this file)
-├── configs/                 <-- exported config notes, DFFs, lookup lists
-├── screenshots/             <-- all screenshots in a single folder (you mentioned this)
-├── process_docs/            <-- runbooks: accrual run, enrollment, schedule
-└── examples/                <-- sample plan definitions & settings
-```
-
-> Put ALL your screenshots in the `screenshots/` folder. I left out an “execution-proof” section as requested — you already have everything in one folder to attach to the repo.
-
----
-
-## ✅ Quick tips for GitHub upload
-
-* Keep all screenshots inside `/screenshots` and reference them from README with relative paths, e.g. `![Accrual run](screenshots/accrual_run.png)`.
-* If you want to share config exports or JSON, place them in `/configs` and add short README notes for each file.
-* Use GitHub Releases or the `results/` folder for any exported reports you want to version.
-
----
 
 ## 📚 Sources & References
 
@@ -117,18 +91,4 @@ Oracle-Fusion-Absence-Management/
 
 ---
 
-## 🏁 Closing note
 
-This README is ready to paste into your repo. If you want, I can:
-
-* add example YAML/JSON snippets for a sample **Accrual Plan** and **Qualification Plan**; or
-* insert relative image links to the screenshots in your `screenshots/` folder (if you tell me the exact file names).
-
-Which would you like next? 😄
-
-[1]: https://docs.oracle.com/en/cloud/saas/human-resources/24b/faiam/toc.htm?utm_source=chatgpt.com "Implementing Absence Management"
-[2]: https://docs.oracle.com/en/cloud/saas/human-resources/24d/faiam/types-of-absence-plans.html?utm_source=chatgpt.com "Types of Absence Plans"
-[3]: https://docs.oracle.com/en/cloud/saas/human-resources/24d/faiam/overview-of-donation.html?utm_source=chatgpt.com "Overview of Donation"
-[4]: https://www.oracle.com/human-capital-management/workforce-management/absence-management/datasheet/?utm_source=chatgpt.com "Datasheet - Oracle Absence Management"
-[5]: https://www.oracle.com/webfolder/dms/m/lw-hcm-fusionabsencemanagement.pdf?elqTrackId=ecaa36cea5de45629434ca962858720c&elqaid=128288&elqak=8AF59700C894F58E2DA0B11A6DA7117BD93DB5DAB48DABF92DA0611E7F31E5F3AAE3&elqat=2&utm_source=chatgpt.com "Fusion Absence Management Processes"
-[6]: https://www.shiftbase.com/glossary/accrual-leave?utm_source=chatgpt.com "Accrual Leave: Definition, Examples, and How It Works"
